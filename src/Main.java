@@ -5,22 +5,38 @@ public class Main {
         employees[1] = new Employee("Tatiana","Barker",2,18150);
         employees[2] = new Employee("Nicola","Gilmore",1,21000);
         employees[3] = new Employee("Tammy","Aguilar",2,19500);
-//        printEmployees(employees);
-//        System.out.println("Total salary: " + calculateTotalSalary(employees));
-//        System.out.println("Average salary: " + calculateAverageSalary(employees));
-//        System.out.println("Lowest Salary employee: " + findLowestSalaryEmployee(employees));
-//        System.out.println("Highest Salary employee: " + findHighestSalaryEmployee(employees));
-//        printEmployeesList(employees);
-//        increaseSalary(employees,5);
-//        System.out.println("Lowest Salary employee in department 1: " + findLowestSalaryEmployeeInDepartment(employees,1));
-//        System.out.println("Highest Salary employee in department 2: " + findHighestSalaryEmployeeInDepartment(employees,2));
-//        System.out.println("Total salary in department 1: " + calculateTotalSalaryInDepartment(employees,1));
-//        System.out.println("Average salary in department 1: " + calculateAverageSalaryInDepartment(employees,1));
-//        increaseSalaryInDepartment(employees,20,1);
-//        printEmployees(employees);
-//        printEmployeesInDepartment(employees,1);
-//        printEmployeesWithSalaryBelowThreshold(employees,19700);
-        printEmployeesWithSalaryAboveThreshold(employees,19700);
+
+        System.out.println("Print all employees");
+        printEmployees(employees);
+        System.out.println();
+
+        System.out.println("Total salary: " + calculateTotalSalary(employees));
+        System.out.println("Average salary: " + calculateAverageSalary(employees));
+        System.out.println("Lowest Salary employee: " + findLowestSalaryEmployee(employees));
+        System.out.println("Highest Salary employee: " + findHighestSalaryEmployee(employees));
+        System.out.println();
+
+        printEmployeesList(employees);
+        System.out.println();
+
+        System.out.println("Increase salary for all by 20%");
+        increaseSalary(employees,20);
+        printEmployees(employees);
+        System.out.println();
+
+        System.out.println("Lowest Salary employee in department 1: " + findLowestSalaryEmployeeInDepartment(employees,1));
+        System.out.println("Highest Salary employee in department 2: " + findHighestSalaryEmployeeInDepartment(employees,2));
+        System.out.println("Total salary in department 1: " + calculateTotalSalaryInDepartment(employees,1));
+        System.out.println("Average salary in department 1: " + calculateAverageSalaryInDepartment(employees,1));
+        System.out.println();
+
+        System.out.println("Increase salary for department 1 by 20%");
+        increaseSalaryInDepartment(employees,20,1);
+        printEmployeesInDepartment(employees,1);
+        System.out.println();
+
+        printEmployeesWithSalaryBelowThreshold(employees,24000);
+        printEmployeesWithSalaryAboveThreshold(employees,24000);
     }
     public static void printEmployees(Employee[] employees) {
         for (Employee employee : employees) {
